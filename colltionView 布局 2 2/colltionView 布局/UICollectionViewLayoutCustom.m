@@ -55,7 +55,7 @@
 - (CGSize)collectionViewContentSize{
     UICollectionViewLayoutAttributes *attributes =  self.attributesArr.lastObject;
     return CGSizeMake(CGRectGetWidth(self.collectionView.bounds), CGRectGetMaxY(attributes.frame));
-//    return CGSizeMake(CGRectGetWidth(self.collectionView.bounds), CGRectGetHeight(self.collectionView.bounds));
+    //    return CGSizeMake(CGRectGetWidth(self.collectionView.bounds), CGRectGetHeight(self.collectionView.bounds));
 }
 
 
@@ -78,8 +78,8 @@
         //脚视图
         attri = [UICollectionViewLayoutAttributes layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionFooter withIndexPath:indexPath];
         if ([self.layoutDelegate respondsToSelector:@selector(layoutSizeForFooterViewInSection:)]) {
-                   CGSize size= [self.layoutDelegate layoutSizeForFooterViewInSection:indexPath.section];
-                   attri.frame = CGRectMake(0, self.SectionLastItemMinY, size.width, size.height);
+            CGSize size= [self.layoutDelegate layoutSizeForFooterViewInSection:indexPath.section];
+            attri.frame = CGRectMake(0, self.SectionLastItemMinY, size.width, size.height);
         }
 
     }
@@ -91,7 +91,7 @@
 -(NSArray *)layoutAttributesForElementsInRect:(CGRect)rect
 {
 
-//    return attributes;
+    //    return attributes;
     return self.attributesArr;
 }
 
